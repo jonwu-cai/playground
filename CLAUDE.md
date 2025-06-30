@@ -91,6 +91,23 @@ The app automatically handles different redirect URIs based on environment:
 2. **Production**: Build standalone app and test authentication flow
 3. Update Spotify Developer Dashboard with the correct URIs for each environment
 
+### Debugging OAuth Authentication Issues
+The authentication service now includes comprehensive debugging logs:
+
+**Console Log Markers:**
+- `🚀 Starting Spotify authentication flow` - Authentication process begins
+- `🔍 DEBUG: Generated redirect URI` - Shows the redirect URI being used
+- `🔍 DEBUG: Authorization request redirect URI` - URI used in authorization request
+- `🔍 DEBUG: Token exchange redirect URI` - URI used in token exchange (should match above)
+- `✅ Authorization successful` - Authorization completed successfully
+- `✅ Token exchange successful` - Token exchange completed successfully
+- `🚨 Authorization error` / `🚨 Token exchange failed` - Error details
+
+**Common Issues:**
+1. **Redirect URI Mismatch**: Check that authorization and token exchange URIs match exactly
+2. **Dashboard Configuration**: Ensure the generated URI is registered in Spotify Developer Dashboard
+3. **Environment Issues**: Verify correct proxy URI (development) or custom scheme (production)
+
 ## Notes
 - This is an Expo managed workflow project
 - Uses TypeScript for type safety
