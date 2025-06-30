@@ -94,7 +94,6 @@ constants/           # App constants
 Update CLAUDE.md with:
 - New dependencies added
 - New scripts or commands
-- Testing procedures
 - Any setup requirements
 
 ## Step 6: Commit and Create Pull Request
@@ -117,7 +116,6 @@ git commit -m "$(cat <<'EOF'
 - Key components/files added or modified
 - Technical improvements made
 - Dependencies added if any
-- Testing completed
 
 Fixes #$ARGUMENTS
 
@@ -144,16 +142,6 @@ gh pr create --draft --title "🎯 Implement [Feature/Fix Name] for issue #$ARGU
 - [ ] Components/files added or modified
 - [ ] Dependencies added
 - [ ] Configuration changes
-
-## Testing
-- [ ] TypeScript compilation passes
-- [ ] ESLint passes with no warnings
-- [ ] App runs without crashes
-- [ ] Feature works as expected
-- [ ] iOS simulator testing completed
-
-## Screenshots/Demo
-[Add screenshots or demo videos if applicable]
 
 Closes #$ARGUMENTS
 
