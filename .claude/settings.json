@@ -1,0 +1,13 @@
+{
+  "project": {
+    "name": "playground",
+    "description": "Expo React Native project with TypeScript",
+    "type": "react-native",
+    "framework": "expo"
+  },
+  "preferences": {
+    "codeStyle": "typescript",
+    "testFramework": "jest",
+    "linting": true
+  }
+}
