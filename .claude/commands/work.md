@@ -12,10 +12,9 @@ This command takes a GitHub issue number as an argument and implements the featu
 2. Fetches the GitHub issue details
 3. Creates a development plan with todos
 4. Implements the feature following React Native/Expo best practices
-5. Runs type checking and linting
-6. Tests the implementation with iOS simulator MCP
-7. Commits all changes with descriptive message
-8. Creates a draft pull request for review
+5. Updates documentation as needed
+6. Commits all changes with descriptive message
+7. Creates a draft pull request for review
 
 ## Arguments:
 - `issue_number`: The GitHub issue number to implement (required)
@@ -91,81 +90,14 @@ constants/           # App constants
 - Use getItemLayout for known item sizes
 - Lazy load heavy components when possible
 
-## Step 5: Dependencies Management
-Always check existing dependencies first:
-```bash
-npm list --depth=0
-```
-
-Install new dependencies with proper versions:
-```bash
-npm install <package>@<compatible-version>
-```
-
-Update package.json scripts if needed.
-
-## Step 6: Implementation Process
-1. **Start development server**: `npm start`
-2. **Create components incrementally**
-3. **Test each component as you build**
-4. **Run type checking**: `npx tsc --noEmit`
-5. **Run linting**: `npx expo lint`
-6. **Fix any issues immediately**
-
-## Step 7: iOS Simulator Testing
-
-### Prerequisites Check:
-```bash
-# Check if iOS simulator MCP is available
-which idb
-xcrun simctl list devices
-```
-
-### Simulator Testing Process:
-1. **Boot simulator**: Start iOS simulator
-2. **Launch app**: `npm run ios`
-3. **Take initial screenshot**
-4. **Test core functionality**:
-   - Navigate through the feature
-   - Test user interactions
-   - Verify UI elements
-   - Test error states
-   - Test loading states
-5. **Take final screenshot**
-6. **Record end-to-end demonstration**
-
-### Testing Commands (if iOS simulator MCP is available):
-```bash
-# Take screenshot
-ios-simulator screenshot
-
-# Describe current screen
-ios-simulator describe
-
-# Test interactions
-ios-simulator tap <x> <y>
-ios-simulator input-text "<text>"
-ios-simulator swipe <x1> <y1> <x2> <y2>
-```
-
-## Step 8: Quality Assurance
-Before marking complete:
-- [ ] All TypeScript errors resolved
-- [ ] All lint warnings addressed  
-- [ ] App runs without crashes
-- [ ] Feature works as specified in issue
-- [ ] Acceptance criteria met
-- [ ] iOS simulator testing completed
-- [ ] Screenshots/recording captured
-
-## Step 9: Documentation
+## Step 5: Documentation
 Update CLAUDE.md with:
 - New dependencies added
 - New scripts or commands
 - Testing procedures
 - Any setup requirements
 
-## Step 10: Commit and Create Pull Request
+## Step 6: Commit and Create Pull Request
 
 ### Commit Changes
 ```bash
@@ -230,7 +162,7 @@ EOF
 )"
 ```
 
-## Step 11: Completion
+## Step 7: Completion
 1. **Mark all todos as completed**
 2. **Verify commit and PR creation**
 3. **Update issue with implementation details**
